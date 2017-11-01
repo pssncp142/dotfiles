@@ -1,0 +1,12 @@
+[options]
+
+font = Inconsolata-g 9
+
+mouse_autohide = true
+clickable_url = true
+browser = chromium
+allow_bold = true
+dynamic_title = true
+scrollback_lines = 10000
+cursor_blink = system
+

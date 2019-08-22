@@ -2,7 +2,7 @@
 export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 
 source <(antibody init)
-antibody bundle < ~/.zsh_plugins.txt
+antibody bundle < $ZDOTDIR/.zsh_plugins.txt
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -12,7 +12,7 @@ EDITOR=/usr/bin/nvim
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/ydallilar/.zshrc'
+zstyle :compinstall filename '/home/ydallilar/.config/zsh.zshrc'
 
 autoload -Uz compinit # promptinit
 compinit

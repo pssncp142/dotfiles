@@ -7,7 +7,7 @@ packages = nvim polybar i3 termite rofi zsh
 
 all: $(packages)
 
-$(packages):
+$(packages): 
 	stow -S -v -t ${DIR} $@ 
 
 .PHONY: clean

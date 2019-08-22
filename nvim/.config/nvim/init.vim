@@ -10,7 +10,9 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'vim-latex/vim-latex'
 	Plug 'neovim/python-client'
 	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
 	Plug 'mhartington/oceanic-next'
+	Plug 'altercation/vim-colors-solarized'
 	Plug 'Shougo/deoplete.nvim'
 	Plug 'roxma/nvim-yarp'
 	Plug 'roxma/vim-hug-neovim-rpc'
@@ -46,7 +48,10 @@ set termguicolors
 
 " Theme
 syntax enable
-colorscheme OceanicNext
+set background=light
+colorscheme solarized
+
+let g:airline_theme='solarized'
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0

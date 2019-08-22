@@ -3,8 +3,8 @@
 My dotfiles for:
 - i3wm
 - polybar
-. zsh
-. neovim
+- zsh
+- neovim
 - rofi
 
 

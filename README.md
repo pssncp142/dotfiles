@@ -1,6 +1,11 @@
 # dotfiles
 
-My dotfiles for zsh shell, tmux and termite, nothing special.
+My dotfiles for:
+- i3wm
+- polybar
+. zsh
+. neovim
+- rofi
 
 
 

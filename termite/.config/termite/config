@@ -1,3 +1,16 @@
+[options]
+
+font = Inconsolata-g 11
+mouse_autohide = true
+clickable_url = true
+browser = firefox
+allow_bold = true
+dynamic_title = true
+scrollback_lines = 10000
+cursor_blink = system
+bold_is_bright = true
+
+
 [colors]
 # Base16 Solarized Light
 # Author: Ethan Schoonover (modified by aramisgithub)

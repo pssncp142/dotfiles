@@ -209,7 +209,7 @@ gaps outer 5
 #bindsym $mod+Control+l exec i3lock-fancy
 #bindsym $mod+Control+l exec xset s activate
 bindsym $mod+Control+l exec xflock4
-bindsym $mod+Escape exec /home/ydallilar/.config/i3/rofi_logout.sh
+bindsym $mod+Escape exec ~/.config/scripts/rofi_logout.sh
 bindsym Print exec gnome-screenshot
 bindsym $mod+Tab exec rofi -theme default -show window
 bindsym $mod+Control+Return exec tilix --quake

@@ -14,7 +14,7 @@ $(packages):
 .PHONY: termite-theme
 termite-theme:
 	cp base16-termite/themes/base16-${TERMITE_THEME}.config termite/.config/termite/theme
-	cat termite/.config/termite/config termite/.config/termite/theme > termite/.config/termite/config
+	cat termite/.config/termite/options termite/.config/termite/theme > termite/.config/termite/config
 
 
 .PHONY: clean

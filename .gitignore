@@ -1,3 +1,6 @@
 
-*/*.old
-*/*.zcomp*
+
+README.md
+**/.config/
+*.old
+*.zcomp*

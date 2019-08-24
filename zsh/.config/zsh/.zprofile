@@ -1,2 +1,3 @@
+EDITOR=nvim
 source ~/.zshrc
 

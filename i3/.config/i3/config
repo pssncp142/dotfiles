@@ -270,6 +270,7 @@ exec --no-startup-id xfce4-panel --disable-wm-check
 exec --no-startup-id nm-applet 
 exec --no-startup-id dropbox
 exec --no-startup-id udiskie --tray --no-automount
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 ## KDE Specific
 

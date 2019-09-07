@@ -25,10 +25,11 @@ function git_prompt_info() {
   echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}${ZSH_THEME_GIT_PROMPT_CLEAN}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
 }
 
+export PATH=/usr/local/bin:$PATH
 
 # added by Miniconda2 4.3.11 installer
 #export PATH="/home/ydallilar/software/miniconda2/bin:$PATH"
-alias anaconda='export PATH="/home/ydallilar/software/miniconda2/bin:$PATH"'
+#alias anaconda='export PATH="/home/ydallilar/software/miniconda2/bin:$PATH"'
 
 #ds9 xpa_method=local
 #alias ds9='ds9 -xpa local'

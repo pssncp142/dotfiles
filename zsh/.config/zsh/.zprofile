@@ -1,3 +1,3 @@
 EDITOR=nvim
-source ~/.zshrc
+source $ZDOTDIR/.zshrc
 

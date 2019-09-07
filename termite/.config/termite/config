@@ -3,60 +3,59 @@
 font = Inconsolata-g 11
 mouse_autohide = true
 clickable_url = true
-browser = firefox
+browser = chromium
 allow_bold = true
 dynamic_title = true
 scrollback_lines = 10000
 cursor_blink = system
-bold_is_bright = true
 
 
 [colors]
-# Base16 Solarized Light
-# Author: Ethan Schoonover (modified by aramisgithub)
+# Base16 OceanicNext
+# Author: https://github.com/voronianski/oceanic-next-color-scheme
 
-foreground          = #586e75
-foreground_bold     = #073642
-cursor              = #073642
-cursor_foreground   = #fdf6e3
-background          = rgba(253, 246, 227)
+foreground          = #C0C5CE
+foreground_bold     = #CDD3DE
+cursor              = #CDD3DE
+cursor_foreground   = #1B2B34
+background          = rgba(27, 43, 52)
 
 # 16 color space
 
 # Black, Gray, Silver, White
-color0  = #fdf6e3
-color8  = #839496
-color7  = #586e75
-color15 = #002b36
+color0  = #1B2B34
+color8  = #65737E
+color7  = #C0C5CE
+color15 = #D8DEE9
 
 # Red
-color1  = #dc322f
-color9  = #dc322f
+color1  = #EC5f67
+color9  = #EC5f67
 
 # Green
-color2  = #859900
-color10 = #859900
+color2  = #99C794
+color10 = #99C794
 
 # Yellow
-color3  = #b58900
-color11 = #b58900
+color3  = #FAC863
+color11 = #FAC863
 
 # Blue
-color4  = #268bd2
-color12 = #268bd2
+color4  = #6699CC
+color12 = #6699CC
 
 # Purple
-color5  = #6c71c4
-color13 = #6c71c4
+color5  = #C594C5
+color13 = #C594C5
 
 # Teal
-color6  = #2aa198
-color14 = #2aa198
+color6  = #5FB3B3
+color14 = #5FB3B3
 
 # Extra colors
-color16 = #cb4b16
-color17 = #d33682
-color18 = #eee8d5
-color19 = #93a1a1
-color20 = #657b83
-color21 = #073642
+color16 = #F99157
+color17 = #AB7967
+color18 = #343D46
+color19 = #4F5B66
+color20 = #A7ADBA
+color21 = #CDD3DE

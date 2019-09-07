@@ -11,6 +11,8 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'neovim/python-client'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
+	Plug 'qpkorr/vim-bufkill'
+	Plug 'tpope/vim-fugitive'
 	Plug 'mhartington/oceanic-next'
 	Plug 'altercation/vim-colors-solarized'
 	Plug 'Shougo/deoplete.nvim'
@@ -48,8 +50,8 @@ set termguicolors
 
 " Theme
 syntax enable
-set background=light
-colorscheme solarized
+" set background=light
+colorscheme OceanicNext
 
 " let g:airline_theme='solarized'
 
@@ -69,30 +71,30 @@ let g:airline#extensions#tabline#show_close_button = 0
 
 au TermOpen * setlocal nonumber norelativenumber
 
-let g:terminal_color_0 = "1B2B34"
-let g:terminal_color_1 = "ec5f67"
-let g:terminal_color_2 = "99c794"
-let g:terminal_color_3 = "fac864"
-let g:terminal_color_4 = "6699cc"
-let g:terminal_color_5 = "c594c5"
-let g:terminal_color_6 = "5fb3b3"
-let g:terminal_color_7 = "coc5ce"
-let g:terminal_color_8 = "65737e"
-let g:terminal_color_9 = "ec5f67"
-let g:terminal_color_10 = "99c794"
-let g:terminal_color_11 = "fac864"
-let g:terminal_color_12 = "6699cc"
-let g:terminal_color_13 = "c594c5"
-let g:terminal_color_14 = "5fb3b3"
-let g:terminal_color_15 = "d8dee9"
+" let g:terminal_color_0 = "1B2B34"
+" let g:terminal_color_1 = "ec5f67"
+" let g:terminal_color_2 = "99c794"
+" let g:terminal_color_3 = "fac864"
+" let g:terminal_color_4 = "6699cc"
+" let g:terminal_color_5 = "c594c5"
+" let g:terminal_color_6 = "5fb3b3"
+" let g:terminal_color_7 = "coc5ce"
+" let g:terminal_color_8 = "65737e"
+" let g:terminal_color_9 = "ec5f67"
+" let g:terminal_color_10 = "99c794"
+" let g:terminal_color_11 = "fac864"
+" let g:terminal_color_12 = "6699cc"
+" let g:terminal_color_13 = "c594c5"
+" let g:terminal_color_14 = "5fb3b3"
+" let g:terminal_color_15 = "d8dee9"
 
 set number relativenumber
 
-hi Normal guibg=none
-hi NonText guibg=none guifg=none cterm=none
-hi LineNr guifg=none guibg=none
-hi CursorLineNr guifg=yellow guibg=none
-hi EndOfBuffer guifg=none guibg=none
+" hi Normal guibg=none
+" hi NonText guibg=none guifg=none cterm=none
+" hi LineNr guifg=none guibg=none
+" hi CursorLineNr guifg=yellow guibg=none
+" hi EndOfBuffer guifg=none guibg=none
 
 " remap split navigation
 " nnoremap <C-J> <C-W><C-J>

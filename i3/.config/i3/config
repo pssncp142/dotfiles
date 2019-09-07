@@ -210,6 +210,7 @@ gaps outer 5
 #bindsym $mod+Control+l exec xset s activate
 bindsym $mod+Control+l exec xflock4
 bindsym $mod+Escape exec ~/.config/scripts/rofi_logout.sh
+bindsym $mod+z exec ~/.config/scripts/switch_layout.sh
 bindsym Print exec gnome-screenshot
 bindsym $mod+Tab exec rofi -theme default -show window
 bindsym $mod+Control+Return exec tilix --quake
@@ -263,14 +264,17 @@ exec_always nitrogen --restore
 exec --no-startup-id compton 
 exec --no-startup-id xrandr --output HDMI-1 --set "Broadcast RGB" "Full"
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
-exec --no-startup-id xfsettingsd
-exec --no-startup-id xfce4-power-manager
-exec --no-startup-id xfce4-screensaver
-exec --no-startup-id xfce4-panel --disable-wm-check
 exec --no-startup-id nm-applet 
 exec --no-startup-id dropbox
 exec --no-startup-id udiskie --tray --no-automount
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+#--------- XFCE Components ---------------------#
+
+exec --no-startup-id xfsettingsd
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id xfce4-screensaver
+exec --no-startup-id xfce4-panel --disable-wm-check
 
 ## KDE Specific
 

@@ -1,0 +1,15 @@
+colorscheme jungle
+rename test.py
+open_with 
+open_with 0
+open_with 2
+
+open_with 
+quit_all
+quit_band
+quit_bang
+my_edit
+wq
+w
+open_with q
+delete

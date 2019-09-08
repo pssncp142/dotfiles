@@ -80,3 +80,10 @@ export RUFONE="/data/Rclone/UFonedrive"
 
 prime () { __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "$@" }
 
+alias aurupd='aur repo --list -d aur | aur vercmp'
+aursc () { aur sync -c -D /data/chroots/arch-base/ -d aur $1 }
+aursync () { aur sync -d aur $1 }
+aurbc () { aur sync -c -D /data/chroots/arch-base/ -d aur }
+aurbuild () { aur sync -d aur }
+
+

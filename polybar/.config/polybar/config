@@ -66,7 +66,7 @@ font-3 = "FontAwesome:pixelsize=10;1"
 
 modules-left = i3 spotify
 modules-center = date 
-modules-right =  wlan cbacklight battery temperature pulseaudio powermenu
+modules-right =  wlan xkb-layout xfce4-presentation cbacklight battery temperature pulseaudio
 
 tray-position = right
 tray-padding = 1
@@ -86,6 +86,21 @@ tray-padding = 1
 
 ;cursor-click = pointer
 ;cursor-scroll = ns-resize
+
+[module/xfce4-presentation]
+
+type = custom/script
+exec = ~/.config/scripts/xfce_pres_toggle.sh --status
+click-left = ~/.config/scripts/xfce_pres_toggle.sh --toggle
+interval = 1
+
+[module/xkb-layout]
+
+type = custom/script
+exec = ~/.config/scripts/switch_layout.sh --status
+click-left = ~/.config/scripts/switch_layout.sh --toggle
+interval = 1
+format-prefix = " "
 
 [module/i3]
 type = internal/i3

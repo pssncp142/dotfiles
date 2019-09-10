@@ -204,17 +204,13 @@ bindsym $mod+m mode $displayMod
 gaps inner 10
 gaps outer 5
 
-#bindsym $mod+Control+l exec i3lock -c 474747
-#bindsym $mod+Control+l exec light-locker-command -l
-#bindsym $mod+Control+l exec i3lock-fancy
-#bindsym $mod+Control+l exec xset s activate
+bindsym $mod+Control+p exec ~/.config/scripts/xfce_pres_toggle.sh --toggle
+bindsym $mod+Control+k exec ~/.config/scripts/switch_layout.sh --toggle
 bindsym $mod+Control+l exec xflock4
 bindsym $mod+Escape exec ~/.config/scripts/rofi_logout.sh
-bindsym $mod+z exec ~/.config/scripts/switch_layout.sh
 bindsym Print exec gnome-screenshot
 bindsym $mod+Tab exec rofi -theme default -show window
 bindsym $mod+Control+Return exec tilix --quake
-#bindsym $mod+o exec termite -e "/bin/zsh -c 'source ~/.zshrc && ranger && exit'" --title=ranger --class=ranger
 bindsym $mod+o exec termite -e "env EDITOR=nvim ranger" --title=ranger --class=ranger
 bindsym $mod+Shift+f exec ~/.config/scripts/flash_win.sh
 bindsym $mod+Control+c exec killall compton && exec compton 

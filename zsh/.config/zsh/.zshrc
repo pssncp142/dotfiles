@@ -86,4 +86,5 @@ aursync () { aur sync -d aur $1 }
 aurbc () { aur sync -c -D /data/chroots/arch-base/ -d aur }
 aurbuild () { aur sync -d aur }
 
+gnome-control-center () { env XDG_CURRENT_DESKTOP=GNOME gnome-control-center }
 

@@ -3,7 +3,6 @@
 
 LAYOUTS=(tr us)
 
-
 NLAYOUTS=${#LAYOUTS[@]}
 
 _current_mode () {
@@ -31,6 +30,7 @@ _next_mode () {
 
 _switch () {
 	setxkbmap -layout $1
+	polybar-msg hook xkb-layout 2
 }
 
 _status () {
@@ -40,6 +40,13 @@ _status () {
 _notify () {
 	notify-send "Layout : ${1^^}"
 	echo "Layout : ${1^^}"
+}
+
+_polybar () {
+	while true; do
+		sleep 1
+		polybar-msg hook xkb-layout 2
+	done
 }
 
 case $1 in
@@ -54,6 +61,8 @@ case $1 in
 	--notify)
 		_current_mode
 		_notify $CURRENT_MODE;;
+	--polybar)
+		_polybar;;
 esac
 
 

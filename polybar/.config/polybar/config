@@ -28,6 +28,8 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/example]
+enable-ipc=true
+
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
@@ -64,9 +66,9 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = "Wuncon Siji:pixelsize=50;2"
 font-3 = "FontAwesome:pixelsize=10;1"
 
-modules-left = i3 spotify
+modules-left = i3
 modules-center = date 
-modules-right =  wlan xkb-layout xfce4-presentation cbacklight battery temperature pulseaudio
+modules-right =  wlan xkb-layout2 xfce4-presentation cbacklight battery temperature pulseaudio
 
 tray-position = right
 tray-padding = 1
@@ -95,6 +97,15 @@ click-left = ~/.config/scripts/xfce_pres_toggle.sh --toggle
 interval = 1
 
 [module/xkb-layout]
+
+type = custom/ipc
+hook-0 = ~/.config/scripts/switch_layout.sh --polybar
+hook-1 = ~/.config/scripts/switch_layout.sh --status
+click-left = ~/.config/scripts/switch_layout.sh --toggle
+initial = 2
+format-prefix = " "
+
+[module/xkb-layout2]
 
 type = custom/script
 exec = ~/.config/scripts/switch_layout.sh --status
@@ -375,7 +386,7 @@ time-alt = %H:%M:%S
 ;format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #0a6cf5
 
-label = %date% %time%
+label =%{A3:gsimplecal:} %date% %time% %{A}
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -390,6 +401,7 @@ label-muted-foreground = #66
 
 ramp-volume-0 = 
 ramp-volume-1 = 
+
 
 [module/battery]
 type = internal/battery
@@ -435,7 +447,7 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-hwmon-path = "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input"
+hwmon-path = "/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input"
 
 format = <ramp> <label>
 ;format-underline = #f50a4d
@@ -494,7 +506,7 @@ path = ~/.config/scripts/backlight.sh
 
 exec = ~/.config/scripts/backlight.sh get
 
-interval = 0.2
+interval = 1
 label = %output%%
 
 scroll-up = ~/.config/scripts/backlight.sh inc

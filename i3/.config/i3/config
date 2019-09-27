@@ -255,7 +255,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 #}
 
 exec_always ~/.config/polybar/launch.sh
-exec --no-startup-id evolution
+exec --no-startup-id firejail evolution
 exec_always nitrogen --restore
 exec --no-startup-id compton 
 exec --no-startup-id xrandr --output HDMI-1 --set "Broadcast RGB" "Full"
@@ -269,8 +269,9 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 exec --no-startup-id xfsettingsd
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id xfce4-screensaver
+#exec --no-startup-id xfce4-screensaver
 exec --no-startup-id xfce4-panel --disable-wm-check
+#exec --no-startup-id xflock4
 
 ## KDE Specific
 

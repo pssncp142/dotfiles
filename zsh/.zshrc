@@ -2,7 +2,7 @@
 export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 
 source <(antibody init)
-antibody bundle < $ZDOTDIR/.zsh_plugins.txt
+antibody bundle < .zsh_plugins.txt
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -25,7 +25,7 @@ function git_prompt_info() {
   echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}${ZSH_THEME_GIT_PROMPT_CLEAN}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
 }
 
-export PATH=/usr/local/bin:$PATH
+#export PATH=/usr/local/bin:$PATH
 
 # added by Miniconda2 4.3.11 installer
 #export PATH="/home/ydallilar/software/miniconda2/bin:$PATH"
@@ -81,10 +81,13 @@ export RUFONE="/data/Rclone/UFonedrive"
 prime () { __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "$@" }
 
 alias aurupd='aur repo --list -d aur | aur vercmp'
-aursc () { aur sync -c -D /data/chroots/arch-base/ -d aur $1 }
-aursync () { aur sync -d aur $1 }
-aurbc () { aur sync -c -D /data/chroots/arch-base/ -d aur }
-aurbuild () { aur sync -d aur }
+aursc () { aur sync -M /etc/makepkg.conf -c -D /data/chroots/arch-base/ -d aur "$@" }
+aursync () { aur sync -d aur "$@" }
+aurbc () { aur build -M /etc/makepkg.conf -c -D /data/chroots/arch-base/ -d aur "$@" }
+aurbuild () { aur build -d aur "$@"}
 
 gnome-control-center () { env XDG_CURRENT_DESKTOP=GNOME gnome-control-center }
 
+mirrorupd () { sudo reflector --verbose --latest 100 --age 12 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist }
+
+pdfquality () { gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/$1 -sOutputFile=$3 $2 }
